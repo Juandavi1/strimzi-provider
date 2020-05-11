@@ -6,7 +6,9 @@ terraform {
 provider "strimzi" {}
 
 resource "strimzi_kafka_topic" "mi_prueba" {
-  topic_name = "product_324"
-  partitions = 1
-  replicas = 1
+  config_path_k8s = "~/.kube/config"
+  namespace = "kafka"
+  topic_name = "my_topic"
+  partitions = 10
+  replicas = 10
 }

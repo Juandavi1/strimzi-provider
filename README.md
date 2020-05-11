@@ -1,0 +1,1 @@
+## Strimzi Provider for Terraform 
